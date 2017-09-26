@@ -17,6 +17,7 @@ namespace EFDome.Controllers
         {
             ViewBag.student = tb.students;
             ViewBag.course = tb.courses;
+            //第一次更改
             return View(sc);
         }
       
