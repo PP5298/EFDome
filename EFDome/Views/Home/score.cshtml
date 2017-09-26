@@ -1,0 +1,25 @@
+﻿@model List<EFDome.Models.score>
+    @{ 
+        Layout = null;
+    }
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>score</title>
+    </head>
+    <body>
+        <div>
+            <a href="@Url.Action("Add","Score")">添加学生</a>
+            <a href="@Url.Action("index","home")">首页</a>,
+            <ul>
+                @foreach (var item in Model)
+            {
+                    <li>学生编号：@item.StudentId -------学生姓名：@item.student.Name  --------科目名称：@item.course.Name  --------科目分数: @item.Value-----------<a href="@Url.Action("Edit","Score",new {id=item.Id})">修改</a> <a href="@Url.Action("Delete","Score",new { id=item.Id})">删除</a></li>
+                }
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+﻿@model EFDome.Models.score
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <div> 
+        <form method="post" action="@Url.Action("Save","Score")">
+            <span>成绩编号:</span>
+            <input type="text" name="Id" readonly="readonly" value="@Model.Id" />
+            <span>学生编号:</span>
+            <input type="text" name="StudentId" readonly="readonly" value="@Model.StudentId" />
+            <span>课程编号:</span>
+            <input type="text" name="CourseId" readonly="readonly" value="@Model.CourseId" />
+            <span>成绩</span>
+            <input type="text" name="Value" value="@Model.Value" />
+            <input type="submit" value="提交" /><a href="@Url.Action("score","home")">返回</a>
+        </form>
+    </div>
+</body>
+</html>

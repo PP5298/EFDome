@@ -1,0 +1,21 @@
+﻿@model IEnumerable<EFDome.Models.student>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+</head>
+<body>
+    <div> 
+        <form method="post" action="@Url.Action("Save","student")">
+            <span>姓名</span><input type="text" name="Name" />
+            <input type="submit"  value="提交" /><a href="@Url.Action("student","home")">返回</a>
+        </form>
+    </div>
+</body>
+</html>

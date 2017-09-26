@@ -1,0 +1,26 @@
+﻿@model List<EFDome.Models.student>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>student</title>
+</head>
+<body>
+    <div> 
+        <a href="@Url.Action("Add","Student")">添加学生</a>
+        <a href="@Url.Action("index","home")">首页</a>
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>学生编号：@item.Id  ---------学生姓名：@item.Name--------- <a href="@Url.Action("Edit","Student",new {id=item.Id})">修改</a> <a href="@Url.Action("Delete","Student",new { id=item.Id})">删除</a></li>
+
+            }
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿@model EFDome.Models.student
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+    <div> 
+        <form method="post" action="@Url.Action("Save","student")">
+            <span>编号:</span><input type="text" name="Id"  value="@Model.Id" readonly="readonly" disabled="disabled"/>
+            <span>姓名:</span><input type="text" name="Name" value="@Model.Name" />
+            <input type="submit" value="提交" /><a href="@Url.Action("student","home")">返回</a>
+        </form>
+    </div>
+</body>
+</html>

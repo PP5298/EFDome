@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+</head>
+<body>
+    <div> 
+        <form method="post" action="@Url.Action("Save","Score")">
+            <span>姓名:</span>
+            <select name="StudentId">
+                @foreach (var item in ViewBag.student)
+                {
+                    <option value="@item.Id">@item.Name</option>
+                }
+            </select>
+            <span>科目:</span>
+            <select name="CourseId">
+                @foreach (var item in ViewBag.course)
+                {
+                    <option value="@item.Id">@item.Name</option>
+                }
+            </select>
+              <span>成绩</span>
+            <input  type="text" name="Value"/>
+            <input type="submit" value="提交" /><a href="@Url.Action("score","home")">返回</a>
+        </form>
+    </div>
+</body>
+</html>
