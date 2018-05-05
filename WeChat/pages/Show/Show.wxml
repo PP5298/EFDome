@@ -1,0 +1,7 @@
+<view class='main'>
+<view><text>用户名：</text>{{name}}</view>
+<view><text>身份证：</text>{{IDCard}}</view>
+<view><text>年龄:</text>{{age}}</view>
+<view><text>性别:</text>{{sex}}</view>
+<view><text>兴趣:</text>{{interest}}</view>
+</view>

@@ -1,0 +1,54 @@
+/**index.wxss**/
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+ padding: 300px 32% 20px;
+}
+.btn-area{
+  margin-top: 60rpx;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 30rpx;
+}
+.userImage{
+  width: 100px;
+  height:100px;
+  border-radius: 100px;
+margin: 10px 37%;
+box-shadow: 1px 1px  1ch #FF82AB;
+transform:translate3d(0,0,0);
+animation: play 10s linear infinite
+}
+
+.userName{
+  font-size: 14px;
+  margin: 10px 33%;
+  font-family:Georgia, serif   
+}
+@keyframes play{
+    0%  {
+        /*水平翻转 */
+        /*-webkit-transform:rotateY(0deg);*/
+        /*垂直翻转*/
+       /* -webkit-transform:rotateX(0deg);*/
+       /* 顺时针旋转*/
+        -webkit-transform:rotate(0deg);
+       /* 逆时针旋转
+        -webkit-transform:rotate(0deg);
+        */
+    }
+    100% {
+        /* 水平翻转 */
+       /* -webkit-transform:rotateY(360deg);*/
+       /* 垂直翻转*/
+       /* -webkit-transform:rotateX(360deg);*/
+        /*  顺时针旋转*/
+        -webkit-transform:rotate(360deg);
+       /* 逆时针旋转
+        -webkit-transform:rotate(-360deg);
+        */
+    }
+}

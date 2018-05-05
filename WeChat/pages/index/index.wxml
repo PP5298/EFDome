@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class='getuser'>
+<image src='{{userImageSrc}}' class='userImage'></image>
+<text class='userName'>Hello,{{userName}}</text>
+</view>
+<button  type='primary' bindtap="openPages" class='btn-area' >注册</button>
+<button bindtap='prompt' class='btn-area' type='primary'>选择提示窗</button>
+ <button  class='btn-area' bindtap='inputprompt' type='primary'>model输入提示框</button> 
+  <modal  style="display:{{pand}}" title="请输入验证码" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+  <input type='text' bindinput='inputtext' placeholder='请输入内容'  ></input>
+  </modal>
+<button bindtap='playVideo' class='btn-area' type='primary'>查找视频</button>
+<button bindtap='checkPosition' class='btn-area' type='primary'>查看我的位置</button>
+<view><button bindtap='connectTest' class='btn-area' type='primary'>连接本地测试</button></view>
+
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+
+ 

@@ -1,0 +1,31 @@
+<view class="main">
+<view class='header'><text>注册页面</text></view>
+<form bindsubmit='formSubmit' bindreset='formReset'>
+      <view>
+          <view class='intext'><text>用户名:</text><input type='text'  name="userName" ></input></view>
+          <view class='intext'><text>身份证:</text><input type='number' name="IDCard"></input></view>
+          <view><text>年  龄:</text><slider name="age" max='130' show-value="true"  ></slider></view>
+         
+          <view class='intext'><text>性  别:</text>
+          <radio-group name="sex">
+          <radio name="sex" value='男'>男</radio>
+          <radio name="sex" value='女'>女</radio>
+          </radio-group>
+          </view>
+          <view class='intext' >
+          <text>兴趣:</text>
+          <checkbox-group name="interest">
+            <checkbox name="interest" value='足球'>足球</checkbox>
+            <checkbox name="interest" value='音乐'>音乐</checkbox>
+            <checkbox name="interest" value='看书'>看书</checkbox>
+            <checkbox name="interest" value='游戏'>游戏</checkbox>
+            <checkbox name="interest" value='散步'>散步</checkbox>
+          </checkbox-group>
+          
+          </view>
+      
+      </view>
+      <view><button type='primary' formType='submit'>注册</button></view>
+</form>
+
+</view>
